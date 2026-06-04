@@ -18,22 +18,24 @@ err() { printf 'aish-install: %s\n' "$1" >&2; exit 1; }
 info() { printf '\033[32m==>\033[0m %s\n' "$1"; }
 
 # --- Detect platform ---------------------------------------------------------
+# Asset names use the RAW `uname` output: aish-$(uname -s)-$(uname -m).
+# OS:   Linux | Darwin
+# Arch: x86_64 | aarch64 (Linux) · x86_64 | arm64 (macOS — arm64, NOT aarch64).
 os="$(uname -s)"
 arch="$(uname -m)"
 
 case "$os" in
-  Linux)  os="linux" ;;
-  Darwin) os="darwin" ;;
+  Linux | Darwin) ;;
   *) err "unsupported OS '$os' — build from source: https://github.com/$REPO" ;;
 esac
 
 case "$arch" in
-  x86_64 | amd64) arch="x86_64" ;;
-  aarch64 | arm64) arch="aarch64" ;;
+  amd64) arch="x86_64" ;;       # normalize the odd reporter; keep arm64/aarch64 as-is
+  x86_64 | aarch64 | arm64) ;;
   *) err "unsupported architecture '$arch' — build from source: https://github.com/$REPO" ;;
 esac
 
-asset="${BIN}-${arch}-${os}"
+asset="${BIN}-${os}-${arch}"
 
 # --- Resolve download URL ----------------------------------------------------
 version="${AISH_VERSION:-latest}"
