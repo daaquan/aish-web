@@ -15,7 +15,7 @@ const plexMono = IBM_Plex_Mono({
 
 const SITE_URL = "https://openaish.com";
 const DESCRIPTION =
-  "aish is an early, open-source design for an AI-native shell — natural language meets the command line. Free software, AGPL-3.0, built in the open.";
+  "aish is an open-source, provider-agnostic AI shell for developers. v0.1 ships aish commit — AI-generated commit messages from your staged diff. Free software, AGPL-3.0.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),

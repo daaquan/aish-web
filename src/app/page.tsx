@@ -1,4 +1,7 @@
+import { InstallCommand } from "./InstallCommand";
+
 const REPO = "https://github.com/daaquan/aish";
+const RELEASES = "https://github.com/daaquan/aish/releases";
 const SPECS = "https://github.com/daaquan/aish/tree/main/docs/superpowers/specs";
 const CONTRIBUTING = "https://github.com/daaquan/aish/blob/main/CONTRIBUTING.md";
 
@@ -13,18 +16,18 @@ function GitHubIcon({ className = "" }: { className?: string }) {
 const features = [
   {
     tag: "01",
-    title: "AI-native REPL",
-    body: "The design goal: intelligence that lives in the prompt itself — the model a first-class citizen of the read-eval-print loop, not bolted on.",
+    title: "aish commit",
+    body: "The first tool ships now: stage your changes, run aish commit, and a model writes a Conventional Commits message from the diff. Confirm, --apply, or add a DCO --signoff.",
   },
   {
     tag: "02",
-    title: "Language meets the shell",
-    body: "The plan — describe intent in plain language or drop to raw commands. One prompt, two registers, no context switch.",
+    title: "Provider-agnostic",
+    body: "Anthropic, OpenAI, Google Gemini, Ollama, and Kilo behind one config and model alias. Never locked to a single vendor — swap models with a flag.",
   },
   {
     tag: "03",
     title: "Open & inspectable",
-    body: "Free software under AGPL-3.0. Read the specs, audit the design, send a patch. Built fully in the open from day one.",
+    body: "Free software under AGPL-3.0, shipped as a single static Rust binary. Read the specs, audit the design, send a patch — built in the open from day one.",
   },
 ];
 
@@ -68,7 +71,7 @@ export default function Home() {
             style={delay()}
           >
             <span className="pulse-dot relative inline-block h-1.5 w-1.5 rounded-full bg-accent" />
-            Early scaffold — building in the open
+            v0.1 shipped — aish commit is live
           </div>
 
           <h1
@@ -84,13 +87,22 @@ export default function Home() {
             className="reveal mt-6 max-w-xl text-lg leading-relaxed text-muted"
             style={delay()}
           >
-            <span className="font-mono text-text">aish</span> is an early, open
-            design for a shell with a model at the heart of the read-eval-print
-            loop — where natural language and the command line share one prompt.
+            <span className="font-mono text-text">aish</span> is an open-source,
+            provider-agnostic AI shell for developers. The first tool ships
+            today:{" "}
+            <span className="font-mono text-text">aish commit</span> turns your
+            staged diff into a clean commit message.
           </p>
 
+          <div className="reveal mt-8 max-w-xl" style={delay()}>
+            <InstallCommand />
+            <p className="mt-2 font-mono text-xs text-faint">
+              Linux & macOS · x86_64 / arm64 · or build from source with cargo.
+            </p>
+          </div>
+
           <div
-            className="reveal mt-9 flex flex-col gap-3 sm:flex-row"
+            className="reveal mt-7 flex flex-col gap-3 sm:flex-row"
             style={delay()}
           >
             <a
@@ -122,32 +134,27 @@ export default function Home() {
               <span className="h-3 w-3 rounded-full bg-[#febc2e]" />
               <span className="h-3 w-3 rounded-full bg-[#28c840]" />
               <span className="ml-3 font-mono text-xs text-faint">aish — zsh</span>
-              <span className="ml-auto rounded border border-[var(--border-strong)] px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider text-muted">
-                Design concept
+              <span className="ml-auto rounded border border-[var(--border-strong)] px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider text-accent">
+                v0.1
               </span>
             </div>
             <div className="space-y-2.5 p-5 font-mono text-[13px] leading-relaxed sm:text-sm">
-              <p className="text-faint">
-                {"// concept preview — aish has no app code yet"}
-              </p>
               <p>
-                <span className="text-accent">aish</span>
-                <span className="text-faint"> ❯ </span>
-                <span className="text-text">
-                  find the largest files under ./logs and zip them
-                </span>
+                <span className="text-faint">$ </span>
+                <span className="text-text">git add -A &amp;&amp; aish commit --signoff</span>
               </p>
               <p className="text-muted">
-                <span className="text-faint">→</span> du -ah ./logs | sort -rh |
-                head -5
+                <span className="text-faint">→</span> reading staged diff · model:
+                claude-opus-4-8
               </p>
+              <p className="pt-1 text-text">feat(provider): add Gemini adapter</p>
               <p className="text-muted">
-                <span className="text-faint">→</span> zip logs-archive.zip
-                access.log error.log
+                Implements the third API shape behind the Provider trait, with
+                401/429 error mapping and a wiremock test.
               </p>
-              <p className="pt-1">
-                <span className="text-accent">aish</span>
-                <span className="text-faint"> ❯ </span>
+              <p className="text-faint">Signed-off-by: daaquan &lt;…&gt;</p>
+              <p className="pt-1 text-muted">
+                Use this message? <span className="text-text">[Y/n]</span>{" "}
                 <span className="cursor align-middle" />
               </p>
             </div>
@@ -186,6 +193,9 @@ export default function Home() {
           <div className="flex items-center gap-5">
             <a href={REPO} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-text">
               GitHub
+            </a>
+            <a href={RELEASES} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-text">
+              Releases
             </a>
             <a href={CONTRIBUTING} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-text">
               Contributing
