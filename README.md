@@ -33,5 +33,5 @@ nginx proxies `openaish.com` → `127.0.0.1:3010`; the Cloudflare tunnel fronts 
 
 ## License
 
-The aish project is licensed **AGPL-3.0-only**. See the
+The aish project is licensed under the **MIT License**. See the
 [aish repository](https://github.com/daaquan/aish) for details.

@@ -15,13 +15,13 @@ const plexMono = IBM_Plex_Mono({
 
 const SITE_URL = "https://openaish.com";
 const DESCRIPTION =
-  "aish is an open-source, provider-agnostic AI shell for developers. v0.1 ships aish commit — AI-generated commit messages from your staged diff. Free software, AGPL-3.0.";
+  "aish is an open-source, provider-agnostic AI shell for developers. v0.1 ships aish commit — AI-generated commit messages from your staged diff. Free software, MIT-licensed.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: "aish — the AI-native shell",
   description: DESCRIPTION,
-  keywords: ["aish", "AI shell", "REPL", "terminal", "AI-native", "open source", "AGPL"],
+  keywords: ["aish", "AI shell", "REPL", "terminal", "AI-native", "open source", "MIT"],
   authors: [{ name: "daaquan" }],
   openGraph: {
     type: "website",

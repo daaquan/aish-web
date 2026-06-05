@@ -4,6 +4,7 @@ const REPO = "https://github.com/daaquan/aish";
 const RELEASES = "https://github.com/daaquan/aish/releases";
 const SPECS = "https://github.com/daaquan/aish/tree/main/docs/superpowers/specs";
 const CONTRIBUTING = "https://github.com/daaquan/aish/blob/main/CONTRIBUTING.md";
+const CHANGELOG = "https://github.com/daaquan/aish/blob/main/CHANGELOG.md";
 
 function GitHubIcon({ className = "" }: { className?: string }) {
   return (
@@ -27,7 +28,7 @@ const features = [
   {
     tag: "03",
     title: "Open & inspectable",
-    body: "Free software under AGPL-3.0, shipped as a single static Rust binary. Read the specs, audit the design, send a patch — built in the open from day one.",
+    body: "MIT-licensed free software, shipped as a single static Rust binary. Read the specs, audit the design, send a patch — built in the open from day one.",
   },
 ];
 
@@ -50,7 +51,7 @@ export default function Home() {
           </span>
           <nav className="flex items-center gap-5 text-sm">
             <span className="hidden font-mono text-xs text-muted sm:inline">
-              AGPL-3.0
+              MIT
             </span>
             <a
               href={REPO}
@@ -189,13 +190,16 @@ export default function Home() {
           className="reveal mt-10 flex flex-col gap-3 border-t border-[var(--border)] py-7 font-mono text-xs text-faint sm:flex-row sm:items-center sm:justify-between"
           style={delay()}
         >
-          <span>AGPL-3.0-only · © 2026 daaquan</span>
+          <span>MIT · © 2026 daaquan</span>
           <div className="flex items-center gap-5">
             <a href={REPO} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-text">
               GitHub
             </a>
             <a href={RELEASES} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-text">
               Releases
+            </a>
+            <a href={CHANGELOG} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-text">
+              Changelog
             </a>
             <a href={CONTRIBUTING} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-text">
               Contributing
