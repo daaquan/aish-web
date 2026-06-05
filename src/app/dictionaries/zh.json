@@ -1,19 +1,19 @@
 {
   "meta": {
     "title": "aish — AI 原生的 shell",
-    "description": "aish 是面向开发者的开源、provider 无关的 AI shell。v0.1 提供 aish commit——根据已暂存的 diff 由 AI 生成提交信息。MIT 许可的自由软件。"
+    "description": "aish 是面向开发者的开源、provider 无关的 AI shell。v0.2 引入了插件系统，aish commit 现作为首个官方插件提供。MIT 许可的自由软件。"
   },
   "nav": { "license": "MIT" },
   "hero": {
-    "badge": "v0.1 已发布 — aish commit 上线",
+    "badge": "v0.2 已发布 — 插件系统上线",
     "titlePre": "AI 原生的",
     "titleAccent": "shell",
     "titleSuffix": "。",
     "subhead": [
       { "text": "aish", "code": true },
-      { "text": " 是面向开发者的开源、provider 无关的 AI shell。首个工具今天发布：" },
+      { "text": " 是面向开发者的开源、provider 无关的 AI shell。v0.2 引入了子进程插件系统，" },
       { "text": "aish commit", "code": true },
-      { "text": " 把你已暂存的 diff 变成整洁的提交信息。" }
+      { "text": " 现作为首个官方插件提供。" }
     ],
     "installCaption": "Linux & macOS · x86_64 / arm64 · 或用 cargo 从源码构建。",
     "starButton": "在 GitHub 点亮 Star",
@@ -24,8 +24,8 @@
     "heading": "aish 的设计理念",
     "items": [
       {
-        "title": "aish commit",
-        "body": "首个工具现已登场：暂存改动后运行 aish commit，模型会根据 diff 写出 Conventional Commits 规范的提交信息。可确认、--apply，或加上 DCO 的 --signoff。"
+        "title": "可扩展的插件",
+        "body": "v0.2 引入了子进程插件系统。可通过 aish plugin install 安装 aish commit 等工具。插件在隔离的 stdio 循环中运行，具有严格的超时限制、有界的 stderr 和完整性检查。"
       },
       {
         "title": "Provider 无关",

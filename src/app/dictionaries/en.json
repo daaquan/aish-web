@@ -1,19 +1,19 @@
 {
   "meta": {
     "title": "aish — the AI-native shell",
-    "description": "aish is an open-source, provider-agnostic AI shell for developers. v0.1 ships aish commit — AI-generated commit messages from your staged diff. Free software, MIT-licensed."
+    "description": "aish is an open-source, provider-agnostic AI shell for developers. v0.2 introduces a plugin system, with aish commit available as a plugin. Free software, MIT-licensed."
   },
   "nav": { "license": "MIT" },
   "hero": {
-    "badge": "v0.1 shipped — aish commit is live",
+    "badge": "v0.2 shipped — plugin system is live",
     "titlePre": "The AI-native",
     "titleAccent": "shell",
     "titleSuffix": ".",
     "subhead": [
       { "text": "aish", "code": true },
-      { "text": " is an open-source, provider-agnostic AI shell for developers. The first tool ships today: " },
+      { "text": " is an open-source, provider-agnostic AI shell for developers. v0.2 introduces a subprocess plugin system, with " },
       { "text": "aish commit", "code": true },
-      { "text": " turns your staged diff into a clean commit message." }
+      { "text": " available as the first official plugin." }
     ],
     "installCaption": "Linux & macOS · x86_64 / arm64 · or build from source with cargo.",
     "starButton": "Star on GitHub",
@@ -24,8 +24,8 @@
     "heading": "What aish is designed to be",
     "items": [
       {
-        "title": "aish commit",
-        "body": "The first tool ships now: stage your changes, run aish commit, and a model writes a Conventional Commits message from the diff. Confirm, --apply, or add a DCO --signoff."
+        "title": "Extensible Plugins",
+        "body": "v0.2 introduces a subprocess plugin system. Install tools like aish commit via aish plugin install. Plugins run in isolated stdio loops with strict timeouts, bounded stderr, and integrity checks."
       },
       {
         "title": "Provider-agnostic",

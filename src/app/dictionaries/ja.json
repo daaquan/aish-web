@@ -1,19 +1,19 @@
 {
   "meta": {
     "title": "aish — AI ネイティブなシェル",
-    "description": "aish は開発者向けのオープンソースかつプロバイダー非依存の AI シェル。v0.1 では aish commit を提供 — ステージ済みの差分から AI がコミットメッセージを生成。MIT ライセンスの自由ソフトウェア。"
+    "description": "aish は開発者向けのオープンソースかつプロバイダー非依存の AI シェル。v0.2 ではプラグインシステムを導入し、aish commit を最初の公式プラグインとして提供。MIT ライセンスの自由ソフトウェア。"
   },
   "nav": { "license": "MIT" },
   "hero": {
-    "badge": "v0.1 リリース — aish commit が使えます",
+    "badge": "v0.2 リリース — プラグインシステムが利用可能",
     "titlePre": "AI ネイティブな",
     "titleAccent": "シェル",
     "titleSuffix": "。",
     "subhead": [
       { "text": "aish", "code": true },
-      { "text": " は開発者向けのオープンソースかつプロバイダー非依存の AI シェル。最初のツールが本日リリース: " },
+      { "text": " は開発者向けのオープンソースかつプロバイダー非依存の AI シェル。v0.2 ではサブプロセスのプラグインシステムを導入し、" },
       { "text": "aish commit", "code": true },
-      { "text": " がステージ済みの差分をきれいなコミットメッセージに変換します。" }
+      { "text": " を最初の公式プラグインとして提供します。" }
     ],
     "installCaption": "Linux & macOS · x86_64 / arm64 · または cargo でソースからビルド。",
     "starButton": "GitHub でスター",
@@ -24,8 +24,8 @@
     "heading": "aish が目指すもの",
     "items": [
       {
-        "title": "aish commit",
-        "body": "最初のツールが登場: 変更をステージして aish commit を実行すると、モデルが差分から Conventional Commits 形式のメッセージを生成。確認、--apply、または DCO の --signoff の追加ができます。"
+        "title": "拡張可能なプラグイン",
+        "body": "v0.2 ではサブプロセスのプラグインシステムを導入。aish plugin install で aish commit などのツールをインストール可能。プラグインは厳格なタイムアウト、制限された stderr、整合性チェックを備えた隔離された stdio ループで実行されます。"
       },
       {
         "title": "プロバイダー非依存",
