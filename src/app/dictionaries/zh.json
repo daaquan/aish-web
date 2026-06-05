@@ -1,0 +1,48 @@
+{
+  "meta": {
+    "title": "aish — AI 原生的 shell",
+    "description": "aish 是面向开发者的开源、provider 无关的 AI shell。v0.1 提供 aish commit——根据已暂存的 diff 由 AI 生成提交信息。MIT 许可的自由软件。"
+  },
+  "nav": { "license": "MIT" },
+  "hero": {
+    "badge": "v0.1 已发布 — aish commit 上线",
+    "titlePre": "AI 原生的",
+    "titleAccent": "shell",
+    "titleSuffix": "。",
+    "subhead": [
+      { "text": "aish", "code": true },
+      { "text": " 是面向开发者的开源、provider 无关的 AI shell。首个工具今天发布：" },
+      { "text": "aish commit", "code": true },
+      { "text": " 把你已暂存的 diff 变成整洁的提交信息。" }
+    ],
+    "installCaption": "Linux & macOS · x86_64 / arm64 · 或用 cargo 从源码构建。",
+    "starButton": "在 GitHub 点亮 Star",
+    "specsButton": "阅读设计规范"
+  },
+  "install": { "copy": "复制", "copied": "已复制", "ariaCopy": "复制安装命令" },
+  "features": {
+    "heading": "aish 的设计理念",
+    "items": [
+      {
+        "title": "aish commit",
+        "body": "首个工具现已登场：暂存改动后运行 aish commit，模型会根据 diff 写出 Conventional Commits 规范的提交信息。可确认、--apply，或加上 DCO 的 --signoff。"
+      },
+      {
+        "title": "Provider 无关",
+        "body": "Anthropic、OpenAI、Google Gemini、Ollama 和 Kilo 统一在一份配置和模型别名之后。绝不锁定单一厂商——用一个 flag 切换模型。"
+      },
+      {
+        "title": "开放且可审查",
+        "body": "MIT 许可的自由软件，以单个静态 Rust 二进制分发。阅读规范、审查设计、提交补丁——从第一天起就公开开发。"
+      }
+    ]
+  },
+  "footer": {
+    "license": "MIT · © 2026 daaquan",
+    "github": "GitHub",
+    "releases": "发布",
+    "changelog": "更新日志",
+    "contributing": "参与贡献",
+    "specs": "规范"
+  }
+}

@@ -1,10 +1,17 @@
-import { InstallCommand } from "./InstallCommand";
+import { notFound } from "next/navigation";
+
+import { InstallCommand } from "../InstallCommand";
+import { getDictionary } from "../dictionaries";
+import { hasLocale } from "../locale";
+import { LangSwitcher } from "../../components/LangSwitcher";
 
 const REPO = "https://github.com/daaquan/aish";
 const RELEASES = "https://github.com/daaquan/aish/releases";
 const SPECS = "https://github.com/daaquan/aish/tree/main/docs/superpowers/specs";
 const CONTRIBUTING = "https://github.com/daaquan/aish/blob/main/CONTRIBUTING.md";
 const CHANGELOG = "https://github.com/daaquan/aish/blob/main/CHANGELOG.md";
+
+const FEATURE_TAGS = ["01", "02", "03"];
 
 function GitHubIcon({ className = "" }: { className?: string }) {
   return (
@@ -14,25 +21,17 @@ function GitHubIcon({ className = "" }: { className?: string }) {
   );
 }
 
-const features = [
-  {
-    tag: "01",
-    title: "aish commit",
-    body: "The first tool ships now: stage your changes, run aish commit, and a model writes a Conventional Commits message from the diff. Confirm, --apply, or add a DCO --signoff.",
-  },
-  {
-    tag: "02",
-    title: "Provider-agnostic",
-    body: "Anthropic, OpenAI, Google Gemini, Ollama, and Kilo behind one config and model alias. Never locked to a single vendor — swap models with a flag.",
-  },
-  {
-    tag: "03",
-    title: "Open & inspectable",
-    body: "MIT-licensed free software, shipped as a single static Rust binary. Read the specs, audit the design, send a patch — built in the open from day one.",
-  },
-];
+export default async function Home({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}) {
+  const { lang } = await params;
+  if (!hasLocale(lang)) notFound();
 
-export default function Home() {
+  const dict = await getDictionary(lang);
+  const { hero, install, features, footer } = dict;
+
   let step = 0;
   const delay = () => ({ animationDelay: `${(step++ * 80).toFixed(0)}ms` });
 
@@ -50,9 +49,7 @@ export default function Home() {
             <span className="text-accent">~</span>/aish
           </span>
           <nav className="flex items-center gap-5 text-sm">
-            <span className="hidden font-mono text-xs text-muted sm:inline">
-              MIT
-            </span>
+            <LangSwitcher current={lang} />
             <a
               href={REPO}
               target="_blank"
@@ -60,7 +57,7 @@ export default function Home() {
               className="flex items-center gap-2 text-muted transition-colors hover:text-text"
             >
               <GitHubIcon className="h-4 w-4" />
-              <span className="hidden sm:inline">GitHub</span>
+              <span className="hidden sm:inline">{footer.github}</span>
             </a>
           </nav>
         </header>
@@ -72,33 +69,42 @@ export default function Home() {
             style={delay()}
           >
             <span className="pulse-dot relative inline-block h-1.5 w-1.5 rounded-full bg-accent" />
-            v0.1 shipped — aish commit is live
+            {hero.badge}
           </div>
 
           <h1
             className="reveal max-w-2xl text-balance text-5xl font-semibold leading-[1.05] tracking-tight sm:text-6xl"
             style={delay()}
           >
-            The AI-native
+            {hero.titlePre}
             <br />
-            <span className="font-mono text-accent">shell</span>.
+            <span className="font-mono text-accent">{hero.titleAccent}</span>
+            {hero.titleSuffix}
           </h1>
 
           <p
             className="reveal mt-6 max-w-xl text-lg leading-relaxed text-muted"
             style={delay()}
           >
-            <span className="font-mono text-text">aish</span> is an open-source,
-            provider-agnostic AI shell for developers. The first tool ships
-            today:{" "}
-            <span className="font-mono text-text">aish commit</span> turns your
-            staged diff into a clean commit message.
+            {hero.subhead.map((run, i) =>
+              run.code ? (
+                <span key={i} className="font-mono text-text">
+                  {run.text}
+                </span>
+              ) : (
+                <span key={i}>{run.text}</span>
+              ),
+            )}
           </p>
 
           <div className="reveal mt-8 max-w-xl" style={delay()}>
-            <InstallCommand />
+            <InstallCommand
+              copyLabel={install.copy}
+              copiedLabel={install.copied}
+              ariaLabel={install.ariaCopy}
+            />
             <p className="mt-2 font-mono text-xs text-faint">
-              Linux & macOS · x86_64 / arm64 · or build from source with cargo.
+              {hero.installCaption}
             </p>
           </div>
 
@@ -113,7 +119,7 @@ export default function Home() {
               className="flex h-11 items-center justify-center gap-2 rounded-md bg-accent px-5 text-sm font-semibold text-black transition-transform hover:-translate-y-0.5"
             >
               <GitHubIcon className="h-4 w-4" />
-              Star on GitHub
+              {hero.starButton}
             </a>
             <a
               href={SPECS}
@@ -121,11 +127,11 @@ export default function Home() {
               rel="noopener noreferrer"
               className="flex h-11 items-center justify-center rounded-md border border-[var(--border-strong)] px-5 text-sm font-medium text-text transition-colors hover:bg-[var(--panel-2)]"
             >
-              Read the design specs
+              {hero.specsButton}
             </a>
           </div>
 
-          {/* Terminal mock */}
+          {/* Terminal mock — literal CLI output, intentionally not localized */}
           <div
             className="reveal mt-14 w-full max-w-2xl overflow-hidden rounded-xl border border-[var(--border)] bg-[var(--panel)] shadow-[0_24px_60px_-24px_rgba(0,0,0,0.8)]"
             style={delay()}
@@ -168,15 +174,17 @@ export default function Home() {
           className="grid gap-px overflow-hidden rounded-xl border border-[var(--border)] bg-[var(--border)] sm:grid-cols-3"
         >
           <h2 id="features-heading" className="sr-only">
-            What aish is designed to be
+            {features.heading}
           </h2>
-          {features.map((f) => (
+          {features.items.map((f, i) => (
             <div
-              key={f.tag}
+              key={FEATURE_TAGS[i]}
               className="reveal flex flex-col bg-[var(--panel)] p-6"
               style={delay()}
             >
-              <span className="font-mono text-xs text-accent">{f.tag}</span>
+              <span className="font-mono text-xs text-accent">
+                {FEATURE_TAGS[i]}
+              </span>
               <h3 className="mt-3 text-base font-semibold tracking-tight">
                 {f.title}
               </h3>
@@ -190,22 +198,22 @@ export default function Home() {
           className="reveal mt-10 flex flex-col gap-3 border-t border-[var(--border)] py-7 font-mono text-xs text-faint sm:flex-row sm:items-center sm:justify-between"
           style={delay()}
         >
-          <span>MIT · © 2026 daaquan</span>
+          <span>{footer.license}</span>
           <div className="flex items-center gap-5">
             <a href={REPO} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-text">
-              GitHub
+              {footer.github}
             </a>
             <a href={RELEASES} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-text">
-              Releases
+              {footer.releases}
             </a>
             <a href={CHANGELOG} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-text">
-              Changelog
+              {footer.changelog}
             </a>
             <a href={CONTRIBUTING} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-text">
-              Contributing
+              {footer.contributing}
             </a>
             <a href={SPECS} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-text">
-              Specs
+              {footer.specs}
             </a>
           </div>
         </footer>

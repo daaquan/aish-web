@@ -4,7 +4,13 @@ import { useState } from "react";
 
 const CMD = "curl -fsSL https://openaish.com/install.sh | bash";
 
-export function InstallCommand() {
+type Props = {
+  copyLabel: string;
+  copiedLabel: string;
+  ariaLabel: string;
+};
+
+export function InstallCommand({ copyLabel, copiedLabel, ariaLabel }: Props) {
   const [copied, setCopied] = useState(false);
 
   const copy = async () => {
@@ -27,10 +33,10 @@ export function InstallCommand() {
       <button
         type="button"
         onClick={copy}
-        aria-label="Copy install command"
+        aria-label={ariaLabel}
         className="shrink-0 rounded border border-[var(--border-strong)] px-2.5 py-1 text-xs font-medium text-muted transition-colors hover:bg-[var(--panel-2)] hover:text-text"
       >
-        {copied ? "Copied" : "Copy"}
+        {copied ? copiedLabel : copyLabel}
       </button>
     </div>
   );
