@@ -1,19 +1,19 @@
 {
   "meta": {
     "title": "aish — AI 原生的 shell",
-    "description": "aish 是面向开发者的开源、provider 无关的 AI shell。v0.2 引入了插件系统，aish commit 现作为首个官方插件提供。MIT 许可的自由软件。"
+    "description": "aish 是面向开发者的开源、provider 无关的 AI shell。v0.3 的插件系统可将 aish commit 等工具作为经校验的预编译二进制安装。MIT 许可的自由软件。"
   },
   "nav": { "license": "MIT" },
   "hero": {
-    "badge": "v0.2 已发布 — 插件系统上线",
+    "badge": "v0.3 已发布 — 插件以预编译二进制安装",
     "titlePre": "AI 原生的",
     "titleAccent": "shell",
     "titleSuffix": "。",
     "subhead": [
       { "text": "aish", "code": true },
-      { "text": " 是面向开发者的开源、provider 无关的 AI shell。v0.2 引入了子进程插件系统，" },
+      { "text": " 是面向开发者的开源、provider 无关的 AI shell。其插件系统将 " },
       { "text": "aish commit", "code": true },
-      { "text": " 现作为首个官方插件提供。" }
+      { "text": " 等工具作为经校验的预编译二进制安装——无需本地构建。" }
     ],
     "installCaption": "Linux & macOS · x86_64 / arm64 · 或用 cargo 从源码构建。",
     "starButton": "在 GitHub 点亮 Star",
@@ -25,7 +25,7 @@
     "items": [
       {
         "title": "可扩展的插件",
-        "body": "v0.2 引入了子进程插件系统。可通过 aish plugin install 安装 aish commit 等工具。插件在隔离的 stdio 循环中运行，具有严格的超时限制、有界的 stderr 和完整性检查。"
+        "body": "子进程插件系统。可通过 aish plugin install 安装 aish commit 等工具。二进制从 GitHub Releases 拉取预编译版本并以 SHA256SUMS 校验，否则回退到本地 cargo 构建。插件在隔离的 stdio 循环中运行，具有严格的超时限制和有界的 stderr。"
       },
       {
         "title": "Provider 无关",
@@ -37,12 +37,20 @@
       }
     ]
   },
+  "plugins": {
+    "heading": "插件目录",
+    "intro": "来自 aish-plugins 仓库的官方插件。每个都可用一条命令安装——aish 会为你的平台拉取经校验的预编译二进制。",
+    "items": [
+      { "description": "根据已暂存的 diff 由 AI 生成提交信息。" }
+    ]
+  },
   "footer": {
     "license": "MIT · © 2026 daaquan",
     "github": "GitHub",
     "releases": "发布",
     "changelog": "更新日志",
     "contributing": "参与贡献",
-    "specs": "规范"
+    "specs": "规范",
+    "plugins": "插件"
   }
 }

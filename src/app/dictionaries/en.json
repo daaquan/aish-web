@@ -1,19 +1,19 @@
 {
   "meta": {
     "title": "aish — the AI-native shell",
-    "description": "aish is an open-source, provider-agnostic AI shell for developers. v0.2 introduces a plugin system, with aish commit available as a plugin. Free software, MIT-licensed."
+    "description": "aish is an open-source, provider-agnostic AI shell for developers. v0.3 ships a plugin system that installs tools like aish commit as verified prebuilt binaries. Free software, MIT-licensed."
   },
   "nav": { "license": "MIT" },
   "hero": {
-    "badge": "v0.2 shipped — plugin system is live",
+    "badge": "v0.3 shipped — plugins install as prebuilt binaries",
     "titlePre": "The AI-native",
     "titleAccent": "shell",
     "titleSuffix": ".",
     "subhead": [
       { "text": "aish", "code": true },
-      { "text": " is an open-source, provider-agnostic AI shell for developers. v0.2 introduces a subprocess plugin system, with " },
+      { "text": " is an open-source, provider-agnostic AI shell for developers. Its plugin system installs tools like " },
       { "text": "aish commit", "code": true },
-      { "text": " available as the first official plugin." }
+      { "text": " as verified prebuilt binaries — no local build required." }
     ],
     "installCaption": "Linux & macOS · x86_64 / arm64 · or build from source with cargo.",
     "starButton": "Star on GitHub",
@@ -25,7 +25,7 @@
     "items": [
       {
         "title": "Extensible Plugins",
-        "body": "v0.2 introduces a subprocess plugin system. Install tools like aish commit via aish plugin install. Plugins run in isolated stdio loops with strict timeouts, bounded stderr, and integrity checks."
+        "body": "A subprocess plugin system: install tools like aish commit with aish plugin install. Binaries are fetched prebuilt from GitHub Releases and verified against SHA256SUMS, falling back to a local cargo build. Plugins run in isolated stdio loops with strict timeouts and bounded stderr."
       },
       {
         "title": "Provider-agnostic",
@@ -37,12 +37,20 @@
       }
     ]
   },
+  "plugins": {
+    "heading": "Plugin directory",
+    "intro": "Official plugins from the aish-plugins registry. Install any with a single command — aish fetches a verified prebuilt binary for your platform.",
+    "items": [
+      { "description": "AI-generated commit messages from your staged diff." }
+    ]
+  },
   "footer": {
     "license": "MIT · © 2026 daaquan",
     "github": "GitHub",
     "releases": "Releases",
     "changelog": "Changelog",
     "contributing": "Contributing",
-    "specs": "Specs"
+    "specs": "Specs",
+    "plugins": "Plugins"
   }
 }

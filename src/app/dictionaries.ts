@@ -21,6 +21,10 @@ export type Dictionary = {
   };
   install: { copy: string; copied: string; ariaCopy: string };
   features: { heading: string; items: { title: string; body: string }[] };
+  // Plugin registry section. Literal plugin metadata (name, version, install
+  // command) lives in page.tsx; only the localized prose lives here, matched
+  // to the registry by index.
+  plugins: { heading: string; intro: string; items: { description: string }[] };
   footer: {
     license: string;
     github: string;
@@ -28,6 +32,7 @@ export type Dictionary = {
     changelog: string;
     contributing: string;
     specs: string;
+    plugins: string;
   };
 };
 
