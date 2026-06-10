@@ -1,19 +1,19 @@
 {
   "meta": {
     "title": "aish — AI ネイティブなシェル",
-    "description": "aish は開発者向けのオープンソースかつプロバイダー非依存の AI シェル。v0.3 では aish commit などのツールを検証済みのプリビルドバイナリとして導入するプラグインシステムを提供。MIT ライセンスの自由ソフトウェア。"
+    "description": "aish は開発者向けのオープンソースかつプロバイダー非依存の AI シェル。v0.4 では aish commit を本体に内蔵 — ステージ済み差分から AI がコミットメッセージを生成、セットアップ不要。MIT ライセンスの自由ソフトウェア。"
   },
   "nav": { "license": "MIT" },
   "hero": {
-    "badge": "v0.3 リリース — プラグインがプリビルドバイナリで導入可能",
+    "badge": "v0.4 リリース — aish commit を内蔵、セットアップ不要",
     "titlePre": "AI ネイティブな",
     "titleAccent": "シェル",
     "titleSuffix": "。",
     "subhead": [
       { "text": "aish", "code": true },
-      { "text": " は開発者向けのオープンソースかつプロバイダー非依存の AI シェル。プラグインシステムが " },
+      { "text": " は開発者向けのオープンソースかつプロバイダー非依存の AI シェル。" },
       { "text": "aish commit", "code": true },
-      { "text": " などのツールを検証済みプリビルドバイナリとして導入 — ローカルビルドは不要です。" }
+      { "text": " は本体に内蔵 — ステージ済みの差分からコミットメッセージを生成し、承認・編集・破棄をその場で選べます。バイナリ以外の導入手順はありません。" }
     ],
     "installCaption": "Linux & macOS · x86_64 / arm64 · または cargo でソースからビルド。",
     "starButton": "GitHub でスター",
@@ -24,8 +24,8 @@
     "heading": "aish が目指すもの",
     "items": [
       {
-        "title": "拡張可能なプラグイン",
-        "body": "サブプロセスのプラグインシステム。aish plugin install で aish commit などのツールを導入。バイナリは GitHub Releases からプリビルドで取得し SHA256SUMS で検証、なければローカルの cargo ビルドにフォールバック。プラグインは厳格なタイムアウトと制限された stderr を備えた隔離 stdio ループで実行されます。"
+        "title": "コミットメッセージを内蔵",
+        "body": "aish commit がステージ済み差分を読み、Conventional Commits 形式のメッセージを提案。承認・$EDITOR で編集・破棄を選択できます。同一リクエストは決定的なローカルキャッシュにヒットし、生成はすべて監査ログに記録、aish usage がトークン数とコストを集計します。"
       },
       {
         "title": "プロバイダー非依存",
@@ -37,20 +37,12 @@
       }
     ]
   },
-  "plugins": {
-    "heading": "プラグインディレクトリ",
-    "intro": "aish-plugins レジストリの公式プラグイン。どれもコマンド一つで導入でき、aish がお使いのプラットフォーム向けの検証済みプリビルドバイナリを取得します。",
-    "items": [
-      { "description": "ステージ済みの差分から AI がコミットメッセージを生成。" }
-    ]
-  },
   "footer": {
     "license": "MIT · © 2026 daaquan",
     "github": "GitHub",
     "releases": "リリース",
     "changelog": "変更履歴",
     "contributing": "コントリビュート",
-    "specs": "仕様",
-    "plugins": "プラグイン"
+    "specs": "仕様"
   }
 }

@@ -10,16 +10,8 @@ const RELEASES = "https://github.com/daaquan/aish/releases";
 const SPECS = "https://github.com/daaquan/aish/tree/main/docs/superpowers/specs";
 const CONTRIBUTING = "https://github.com/daaquan/aish/blob/main/CONTRIBUTING.md";
 const CHANGELOG = "https://github.com/daaquan/aish/blob/main/CHANGELOG.md";
-const REGISTRY = "https://github.com/daaquan/aish-plugins";
 
 const FEATURE_TAGS = ["01", "02", "03"];
-
-// Official plugin registry (github.com/daaquan/aish-plugins). Literal CLI
-// facts — name, version, install command — intentionally not localized; the
-// localized description is matched by index from the dictionary.
-const PLUGINS = [
-  { name: "commit", version: "v0.1.0", install: "aish plugin install commit" },
-];
 
 function GitHubIcon({ className = "" }: { className?: string }) {
   return (
@@ -38,7 +30,7 @@ export default async function Home({
   if (!hasLocale(lang)) notFound();
 
   const dict = await getDictionary(lang);
-  const { hero, install, features, plugins, footer } = dict;
+  const { hero, install, features, footer } = dict;
 
   let step = 0;
   const delay = () => ({ animationDelay: `${(step++ * 80).toFixed(0)}ms` });
@@ -150,7 +142,7 @@ export default async function Home({
               <span className="h-3 w-3 rounded-full bg-[#28c840]" />
               <span className="ml-3 font-mono text-xs text-faint">aish — zsh</span>
               <span className="ml-auto rounded border border-[var(--border-strong)] px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider text-accent">
-                v0.3
+                v0.4
               </span>
             </div>
             <div className="space-y-2.5 p-5 font-mono text-[13px] leading-relaxed sm:text-sm">
@@ -169,7 +161,7 @@ export default async function Home({
               </p>
               <p className="text-faint">Signed-off-by: daaquan &lt;…&gt;</p>
               <p className="pt-1 text-muted">
-                Use this message? <span className="text-text">[Y/n]</span>{" "}
+                Accept? <span className="text-text">[Y/n/e(dit)]</span>{" "}
                 <span className="cursor align-middle" />
               </p>
             </div>
@@ -201,46 +193,6 @@ export default async function Home({
           ))}
         </section>
 
-        {/* Plugin directory */}
-        <section aria-labelledby="plugins-heading" className="mt-16">
-          <div className="reveal max-w-2xl" style={delay()}>
-            <h2
-              id="plugins-heading"
-              className="text-2xl font-semibold tracking-tight sm:text-3xl"
-            >
-              {plugins.heading}
-            </h2>
-            <p className="mt-3 text-base leading-relaxed text-muted">
-              {plugins.intro}
-            </p>
-          </div>
-
-          <div className="mt-7 grid gap-px overflow-hidden rounded-xl border border-[var(--border)] bg-[var(--border)] sm:grid-cols-2">
-            {PLUGINS.map((p, i) => (
-              <div
-                key={p.name}
-                className="reveal flex flex-col bg-[var(--panel)] p-6"
-                style={delay()}
-              >
-                <div className="flex items-center justify-between gap-3">
-                  <span className="font-mono text-sm font-semibold tracking-tight">
-                    <span className="text-accent">aish</span> {p.name}
-                  </span>
-                  <span className="rounded border border-[var(--border-strong)] px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider text-accent">
-                    {p.version}
-                  </span>
-                </div>
-                <p className="mt-3 flex-1 text-sm leading-relaxed text-muted">
-                  {plugins.items[i]?.description}
-                </p>
-                <code className="mt-4 block overflow-x-auto rounded-md border border-[var(--border)] bg-[var(--panel-2)] px-3 py-2 font-mono text-xs text-text">
-                  {p.install}
-                </code>
-              </div>
-            ))}
-          </div>
-        </section>
-
         {/* Footer */}
         <footer
           className="reveal mt-10 flex flex-col gap-3 border-t border-[var(--border)] py-7 font-mono text-xs text-faint sm:flex-row sm:items-center sm:justify-between"
@@ -256,9 +208,6 @@ export default async function Home({
             </a>
             <a href={CHANGELOG} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-text">
               {footer.changelog}
-            </a>
-            <a href={REGISTRY} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-text">
-              {footer.plugins}
             </a>
             <a href={CONTRIBUTING} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-text">
               {footer.contributing}
