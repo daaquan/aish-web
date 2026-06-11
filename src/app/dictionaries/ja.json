@@ -1,25 +1,58 @@
 {
   "meta": {
     "title": "aish — AI ネイティブなシェル",
-    "description": "aish は開発者向けのオープンソースかつプロバイダー非依存の AI シェル。v0.4 では aish commit を本体に内蔵 — ステージ済み差分から AI がコミットメッセージを生成、セットアップ不要。MIT ライセンスの自由ソフトウェア。"
+    "description": "aish は開発者向けのオープンソースかつプロバイダー非依存の AI シェル。v0.5 でバイナリが自己管理に — aish update で最新リリースへ更新、aish uninstall でクリーンに削除。aish commit も引き続き内蔵、セットアップ不要。MIT ライセンスの自由ソフトウェア。"
   },
-  "nav": { "license": "MIT" },
+  "nav": {
+    "license": "MIT"
+  },
   "hero": {
-    "badge": "v0.4 リリース — aish commit を内蔵、セットアップ不要",
+    "badge": "v0.5 リリース — aish update でバイナリを常に最新に",
     "titlePre": "AI ネイティブな",
     "titleAccent": "シェル",
     "titleSuffix": "。",
     "subhead": [
-      { "text": "aish", "code": true },
-      { "text": " は開発者向けのオープンソースかつプロバイダー非依存の AI シェル。" },
-      { "text": "aish commit", "code": true },
-      { "text": " は本体に内蔵 — ステージ済みの差分からコミットメッセージを生成し、承認・編集・破棄をその場で選べます。バイナリ以外の導入手順はありません。" }
+      {
+        "text": "aish",
+        "code": true
+      },
+      {
+        "text": " は開発者向けのオープンソースかつプロバイダー非依存の AI シェル。"
+      },
+      {
+        "text": "aish commit",
+        "code": true
+      },
+      {
+        "text": " は本体に内蔵 — ステージ済みの差分からコミットメッセージを生成し、承認・編集・破棄をその場で選べます。バイナリ以外の導入手順はありません。"
+      },
+      {
+        "text": " v0.5 の新機能: "
+      },
+      {
+        "text": "aish update",
+        "code": true
+      },
+      {
+        "text": " が GitHub リリースから自己更新、"
+      },
+      {
+        "text": "aish uninstall",
+        "code": true
+      },
+      {
+        "text": " がバイナリ（必要ならデータも）をクリーンに削除します。"
+      }
     ],
     "installCaption": "Linux & macOS · x86_64 / arm64 · または cargo でソースからビルド。",
     "starButton": "GitHub でスター",
     "specsButton": "設計仕様を読む"
   },
-  "install": { "copy": "コピー", "copied": "コピー済み", "ariaCopy": "インストールコマンドをコピー" },
+  "install": {
+    "copy": "コピー",
+    "copied": "コピー済み",
+    "ariaCopy": "インストールコマンドをコピー"
+  },
   "features": {
     "heading": "aish が目指すもの",
     "items": [

@@ -1,25 +1,58 @@
 {
   "meta": {
     "title": "aish — AI 原生的 shell",
-    "description": "aish 是面向开发者的开源、provider 无关的 AI shell。v0.4 将 aish commit 内置于本体——从已暂存的 diff 生成提交信息，零配置。MIT 许可的自由软件。"
+    "description": "aish 是面向开发者的开源、provider 无关的 AI shell。v0.5 让二进制实现自我管理——aish update 拉取最新发布版本，aish uninstall 干净卸载。aish commit 依旧内置，零配置。MIT 许可的自由软件。"
   },
-  "nav": { "license": "MIT" },
+  "nav": {
+    "license": "MIT"
+  },
   "hero": {
-    "badge": "v0.4 已发布 — aish commit 已内置，零配置",
+    "badge": "v0.5 已发布 — aish update 让二进制保持最新",
     "titlePre": "AI 原生的",
     "titleAccent": "shell",
     "titleSuffix": "。",
     "subhead": [
-      { "text": "aish", "code": true },
-      { "text": " 是面向开发者的开源、provider 无关的 AI shell。" },
-      { "text": "aish commit", "code": true },
-      { "text": " 内置于本体——把已暂存的 diff 变成提交信息，当场选择接受、编辑或放弃。除二进制本身外无需任何安装步骤。" }
+      {
+        "text": "aish",
+        "code": true
+      },
+      {
+        "text": " 是面向开发者的开源、provider 无关的 AI shell。"
+      },
+      {
+        "text": "aish commit",
+        "code": true
+      },
+      {
+        "text": " 内置于本体——把已暂存的 diff 变成提交信息，当场选择接受、编辑或放弃。除二进制本身外无需任何安装步骤。"
+      },
+      {
+        "text": " v0.5 新增："
+      },
+      {
+        "text": "aish update",
+        "code": true
+      },
+      {
+        "text": " 从 GitHub Releases 自我更新，"
+      },
+      {
+        "text": "aish uninstall",
+        "code": true
+      },
+      {
+        "text": " 干净移除二进制（可选连同数据）。"
+      }
     ],
     "installCaption": "Linux & macOS · x86_64 / arm64 · 或用 cargo 从源码构建。",
     "starButton": "在 GitHub 点亮 Star",
     "specsButton": "阅读设计规范"
   },
-  "install": { "copy": "复制", "copied": "已复制", "ariaCopy": "复制安装命令" },
+  "install": {
+    "copy": "复制",
+    "copied": "已复制",
+    "ariaCopy": "复制安装命令"
+  },
   "features": {
     "heading": "aish 的设计理念",
     "items": [

@@ -1,25 +1,58 @@
 {
   "meta": {
     "title": "aish — the AI-native shell",
-    "description": "aish is an open-source, provider-agnostic AI shell for developers. v0.4 ships aish commit built in: an AI-generated commit message from your staged diff, with zero setup. Free software, MIT-licensed."
+    "description": "aish is an open-source, provider-agnostic AI shell for developers. v0.5 makes the binary self-managing: aish update pulls the latest release and aish uninstall removes it cleanly — aish commit still built in, zero setup. Free software, MIT-licensed."
   },
-  "nav": { "license": "MIT" },
+  "nav": {
+    "license": "MIT"
+  },
   "hero": {
-    "badge": "v0.4 shipped — aish commit is built in, zero setup",
+    "badge": "v0.5 shipped — aish update keeps the binary current",
     "titlePre": "The AI-native",
     "titleAccent": "shell",
     "titleSuffix": ".",
     "subhead": [
-      { "text": "aish", "code": true },
-      { "text": " is an open-source, provider-agnostic AI shell for developers. " },
-      { "text": "aish commit", "code": true },
-      { "text": " is built in — it turns your staged diff into a commit message you can accept, edit, or reject, with no install step beyond the binary itself." }
+      {
+        "text": "aish",
+        "code": true
+      },
+      {
+        "text": " is an open-source, provider-agnostic AI shell for developers. "
+      },
+      {
+        "text": "aish commit",
+        "code": true
+      },
+      {
+        "text": " is built in — it turns your staged diff into a commit message you can accept, edit, or reject, with no install step beyond the binary itself."
+      },
+      {
+        "text": " New in v0.5: "
+      },
+      {
+        "text": "aish update",
+        "code": true
+      },
+      {
+        "text": " self-updates from GitHub releases and "
+      },
+      {
+        "text": "aish uninstall",
+        "code": true
+      },
+      {
+        "text": " removes the binary (and optionally its data) cleanly."
+      }
     ],
     "installCaption": "Linux & macOS · x86_64 / arm64 · or build from source with cargo.",
     "starButton": "Star on GitHub",
     "specsButton": "Read the design specs"
   },
-  "install": { "copy": "Copy", "copied": "Copied", "ariaCopy": "Copy install command" },
+  "install": {
+    "copy": "Copy",
+    "copied": "Copied",
+    "ariaCopy": "Copy install command"
+  },
   "features": {
     "heading": "What aish is designed to be",
     "items": [
