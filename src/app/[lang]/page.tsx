@@ -142,7 +142,7 @@ export default async function Home({
               <span className="h-3 w-3 rounded-full bg-[#28c840]" />
               <span className="ml-3 font-mono text-xs text-faint">aish — zsh</span>
               <span className="ml-auto rounded border border-[var(--border-strong)] px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider text-accent">
-                v0.5
+                v0.6
               </span>
             </div>
             <div className="space-y-2.5 p-5 font-mono text-[13px] leading-relaxed sm:text-sm">

@@ -6,7 +6,7 @@
 #   curl -fsSL https://openaish.com/install.sh | bash
 #
 # Environment overrides:
-#   AISH_VERSION    pin a release tag (default: latest)   e.g. AISH_VERSION=v0.5.0
+#   AISH_VERSION    pin a release tag (default: latest)   e.g. AISH_VERSION=v0.6.0
 #   AISH_INSTALL_DIR  target bin dir (default: /usr/local/bin or ~/.local/bin)
 #
 set -eu

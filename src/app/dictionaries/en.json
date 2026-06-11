@@ -1,13 +1,13 @@
 {
   "meta": {
     "title": "aish — the AI-native shell",
-    "description": "aish is an open-source, provider-agnostic AI shell for developers. v0.5 makes the binary self-managing: aish update pulls the latest release and aish uninstall removes it cleanly — aish commit still built in, zero setup. Free software, MIT-licensed."
+    "description": "aish is an open-source, provider-agnostic AI shell for developers. v0.6 grows the toolbelt: aish pr, review, changelog, and ask join commit — PR descriptions, diff reviews, changelog entries, and one-shot questions from your terminal. Free software, MIT-licensed."
   },
   "nav": {
     "license": "MIT"
   },
   "hero": {
-    "badge": "v0.5 shipped — aish update keeps the binary current",
+    "badge": "v0.6 shipped — pr, review, changelog & ask join the toolbelt",
     "titlePre": "The AI-native",
     "titleAccent": "shell",
     "titleSuffix": ".",
@@ -27,21 +27,35 @@
         "text": " is built in — it turns your staged diff into a commit message you can accept, edit, or reject, with no install step beyond the binary itself."
       },
       {
-        "text": " New in v0.5: "
+        "text": " New in v0.6: "
       },
       {
-        "text": "aish update",
+        "text": "aish pr",
         "code": true
       },
       {
-        "text": " self-updates from GitHub releases and "
+        "text": ", "
       },
       {
-        "text": "aish uninstall",
+        "text": "aish review",
         "code": true
       },
       {
-        "text": " removes the binary (and optionally its data) cleanly."
+        "text": ", "
+      },
+      {
+        "text": "aish changelog",
+        "code": true
+      },
+      {
+        "text": " and "
+      },
+      {
+        "text": "aish ask",
+        "code": true
+      },
+      {
+        "text": " — PR descriptions, severity-graded diff reviews, release notes, and one-shot questions piped straight from your terminal."
       }
     ],
     "installCaption": "Linux & macOS · x86_64 / arm64 · or build from source with cargo.",
@@ -57,8 +71,8 @@
     "heading": "What aish is designed to be",
     "items": [
       {
-        "title": "Commit messages, built in",
-        "body": "aish commit reads your staged diff and proposes a Conventional Commits message; accept, edit in $EDITOR, or reject. Identical requests hit a deterministic local cache, every generation lands in an audit log, and aish usage turns that log into token and cost reports."
+        "title": "Your git workflow, built in",
+        "body": "aish commit turns your staged diff into a Conventional Commits message; aish pr drafts the PR title and body, aish review grades your diff by severity, and aish changelog writes release notes from your commits. Identical requests hit a deterministic local cache, every generation lands in an audit log, and aish usage turns that log into token and cost reports."
       },
       {
         "title": "Provider-agnostic",

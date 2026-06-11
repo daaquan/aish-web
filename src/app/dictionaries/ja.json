@@ -1,13 +1,13 @@
 {
   "meta": {
     "title": "aish — AI ネイティブなシェル",
-    "description": "aish は開発者向けのオープンソースかつプロバイダー非依存の AI シェル。v0.5 でバイナリが自己管理に — aish update で最新リリースへ更新、aish uninstall でクリーンに削除。aish commit も引き続き内蔵、セットアップ不要。MIT ライセンスの自由ソフトウェア。"
+    "description": "aish は開発者向けのオープンソースかつプロバイダー非依存の AI シェル。v0.6 でツール群が拡大 — aish pr、review、changelog、ask が commit に加わり、PR 説明文・差分レビュー・変更履歴・単発質問をターミナルから。MIT ライセンスの自由ソフトウェア。"
   },
   "nav": {
     "license": "MIT"
   },
   "hero": {
-    "badge": "v0.5 リリース — aish update でバイナリを常に最新に",
+    "badge": "v0.6 リリース — pr・review・changelog・ask がツール群に追加",
     "titlePre": "AI ネイティブな",
     "titleAccent": "シェル",
     "titleSuffix": "。",
@@ -27,21 +27,35 @@
         "text": " は本体に内蔵 — ステージ済みの差分からコミットメッセージを生成し、承認・編集・破棄をその場で選べます。バイナリ以外の導入手順はありません。"
       },
       {
-        "text": " v0.5 の新機能: "
+        "text": " v0.6 の新機能: "
       },
       {
-        "text": "aish update",
+        "text": "aish pr",
         "code": true
       },
       {
-        "text": " が GitHub リリースから自己更新、"
+        "text": "、"
       },
       {
-        "text": "aish uninstall",
+        "text": "aish review",
         "code": true
       },
       {
-        "text": " がバイナリ（必要ならデータも）をクリーンに削除します。"
+        "text": "、"
+      },
+      {
+        "text": "aish changelog",
+        "code": true
+      },
+      {
+        "text": "、"
+      },
+      {
+        "text": "aish ask",
+        "code": true
+      },
+      {
+        "text": " — PR 説明文の生成、重大度別の差分レビュー、リリースノート作成、パイプで渡す単発質問までターミナルで完結。"
       }
     ],
     "installCaption": "Linux & macOS · x86_64 / arm64 · または cargo でソースからビルド。",
@@ -57,8 +71,8 @@
     "heading": "aish が目指すもの",
     "items": [
       {
-        "title": "コミットメッセージを内蔵",
-        "body": "aish commit がステージ済み差分を読み、Conventional Commits 形式のメッセージを提案。承認・$EDITOR で編集・破棄を選択できます。同一リクエストは決定的なローカルキャッシュにヒットし、生成はすべて監査ログに記録、aish usage がトークン数とコストを集計します。"
+        "title": "git ワークフローを内蔵",
+        "body": "aish commit がステージ済み差分から Conventional Commits 形式のメッセージを提案。aish pr が PR タイトルと本文を起草し、aish review が差分を重大度別にレビュー、aish changelog がコミットからリリースノートを生成します。同一リクエストは決定的なローカルキャッシュにヒットし、生成はすべて監査ログに記録、aish usage がトークン数とコストを集計します。"
       },
       {
         "title": "プロバイダー非依存",

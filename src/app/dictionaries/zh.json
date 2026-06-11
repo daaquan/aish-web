@@ -1,13 +1,13 @@
 {
   "meta": {
     "title": "aish — AI 原生的 shell",
-    "description": "aish 是面向开发者的开源、provider 无关的 AI shell。v0.5 让二进制实现自我管理——aish update 拉取最新发布版本，aish uninstall 干净卸载。aish commit 依旧内置，零配置。MIT 许可的自由软件。"
+    "description": "aish 是面向开发者的开源、provider 无关的 AI shell。v0.6 扩充工具集——aish pr、review、changelog、ask 加入 commit：PR 描述、diff 审查、更新日志、终端单次提问。MIT 许可的自由软件。"
   },
   "nav": {
     "license": "MIT"
   },
   "hero": {
-    "badge": "v0.5 已发布 — aish update 让二进制保持最新",
+    "badge": "v0.6 已发布 — pr、review、changelog、ask 加入工具集",
     "titlePre": "AI 原生的",
     "titleAccent": "shell",
     "titleSuffix": "。",
@@ -27,21 +27,35 @@
         "text": " 内置于本体——把已暂存的 diff 变成提交信息，当场选择接受、编辑或放弃。除二进制本身外无需任何安装步骤。"
       },
       {
-        "text": " v0.5 新增："
+        "text": " v0.6 新增："
       },
       {
-        "text": "aish update",
+        "text": "aish pr",
         "code": true
       },
       {
-        "text": " 从 GitHub Releases 自我更新，"
+        "text": "、"
       },
       {
-        "text": "aish uninstall",
+        "text": "aish review",
         "code": true
       },
       {
-        "text": " 干净移除二进制（可选连同数据）。"
+        "text": "、"
+      },
+      {
+        "text": "aish changelog",
+        "code": true
+      },
+      {
+        "text": "、"
+      },
+      {
+        "text": "aish ask",
+        "code": true
+      },
+      {
+        "text": " ——生成 PR 描述、按严重度审查 diff、撰写发布说明、用管道把输出直接变成提问，全部在终端完成。"
       }
     ],
     "installCaption": "Linux & macOS · x86_64 / arm64 · 或用 cargo 从源码构建。",
@@ -57,8 +71,8 @@
     "heading": "aish 的设计理念",
     "items": [
       {
-        "title": "内置提交信息生成",
-        "body": "aish commit 读取已暂存的 diff，提议 Conventional Commits 格式的信息；可接受、在 $EDITOR 中编辑或拒绝。相同请求命中确定性的本地缓存，每次生成都写入审计日志，aish usage 据此汇总 token 用量与成本。"
+        "title": "内置 git 工作流",
+        "body": "aish commit 把已暂存的 diff 变成 Conventional Commits 信息；aish pr 起草 PR 标题与正文，aish review 按严重度审查 diff，aish changelog 从提交生成发布说明。相同请求命中确定性的本地缓存，每次生成都写入审计日志，aish usage 据此汇总 token 用量与成本。"
       },
       {
         "title": "Provider 无关",
