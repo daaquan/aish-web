@@ -6,7 +6,7 @@
 #   curl -fsSL https://openaish.com/install.sh | bash
 #
 # Environment overrides:
-#   AISH_VERSION    pin a release tag (default: latest)   e.g. AISH_VERSION=v0.6.0
+#   AISH_VERSION    pin a release tag (default: latest)   e.g. AISH_VERSION=v0.7.1
 #   AISH_INSTALL_DIR  target bin dir (default: /usr/local/bin or ~/.local/bin)
 #
 set -eu
@@ -91,4 +91,4 @@ case ":$PATH:" in
   *) printf '\033[33m==>\033[0m %s is not on your PATH. Add it:\n    export PATH="%s:$PATH"\n' "$dir" "$dir" ;;
 esac
 
-info "run '$BIN --version' to verify, then '$BIN config init' to get started"
+info "run '$BIN --version' to verify, then '$BIN setup' to configure providers"

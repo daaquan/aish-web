@@ -38,7 +38,7 @@ export async function generateMetadata({
     metadataBase: new URL(SITE_URL),
     title,
     description,
-    keywords: ["aish", "AI shell", "REPL", "terminal", "AI-native", "open source", "MIT"],
+    keywords: ["aish", "AI copilot", "command line", "CLI", "terminal", "git", "open source", "MIT"],
     authors: [{ name: "daaquan" }],
     alternates: {
       canonical: `/${lang}`,

@@ -1,7 +1,7 @@
 # aish-web
 
-Landing / intro site for **[aish](https://github.com/daaquan/aish)** — an early, open-source
-design for an AI-native shell. Live at **[openaish.com](https://openaish.com)**.
+Landing / intro site for **[aish](https://github.com/daaquan/aish)** — an open-source
+AI copilot for your command line. Live at **[openaish.com](https://openaish.com)**.
 
 Built with Next.js 16 (App Router) + Tailwind CSS v4. Terminal-dark aesthetic.
 

@@ -1,15 +1,15 @@
 {
   "meta": {
-    "title": "aish — the AI-native shell",
-    "description": "aish is an open-source, provider-agnostic AI shell for developers. v0.6 grows the toolbelt: aish pr, review, changelog, and ask join commit — PR descriptions, diff reviews, changelog entries, and one-shot questions from your terminal. Free software, MIT-licensed."
+    "title": "aish — AI copilot for your command line",
+    "description": "aish is an open-source, provider-agnostic AI copilot for your command line. It wraps the commands developers run every day — commit, pr, review, changelog, and ask — as built-in subcommands that draft clean summaries and troubleshoot output. Free software, MIT-licensed."
   },
   "nav": {
     "license": "MIT"
   },
   "hero": {
-    "badge": "v0.6 shipped — pr, review, changelog & ask join the toolbelt",
-    "titlePre": "The AI-native",
-    "titleAccent": "shell",
+    "badge": "v0.7 shipped — aish setup, an interactive config wizard",
+    "titlePre": "AI copilot for your",
+    "titleAccent": "command line",
     "titleSuffix": ".",
     "subhead": [
       {
@@ -17,7 +17,7 @@
         "code": true
       },
       {
-        "text": " is an open-source, provider-agnostic AI shell for developers. "
+        "text": " is an open-source, provider-agnostic AI copilot for your command line. "
       },
       {
         "text": "aish commit",
@@ -27,40 +27,19 @@
         "text": " is built in — it turns your staged diff into a commit message you can accept, edit, or reject, with no install step beyond the binary itself."
       },
       {
-        "text": " New in v0.6: "
+        "text": " New in v0.7: "
       },
       {
-        "text": "aish pr",
+        "text": "aish setup",
         "code": true
       },
       {
-        "text": ", "
-      },
-      {
-        "text": "aish review",
-        "code": true
-      },
-      {
-        "text": ", "
-      },
-      {
-        "text": "aish changelog",
-        "code": true
-      },
-      {
-        "text": " and "
-      },
-      {
-        "text": "aish ask",
-        "code": true
-      },
-      {
-        "text": " — PR descriptions, severity-graded diff reviews, release notes, and one-shot questions piped straight from your terminal."
+        "text": " — an interactive wizard that configures your provider keys (plaintext or environment-variable references) and default model, with a config created automatically on first run."
       }
     ],
     "installCaption": "Linux & macOS · x86_64 / arm64 · or build from source with cargo.",
     "starButton": "Star on GitHub",
-    "specsButton": "Read the design specs"
+    "specsButton": "Read the architecture decisions"
   },
   "install": {
     "copy": "Copy",
@@ -76,11 +55,11 @@
       },
       {
         "title": "Provider-agnostic",
-        "body": "Anthropic, OpenAI, Google Gemini, Ollama, and Kilo behind one config and model alias. Never locked to a single vendor — swap models with a flag."
+        "body": "Anthropic, OpenAI, Google Gemini, OpenRouter, DeepSeek, Groq, Ollama, and Kilo behind one config and model alias. Never locked to a single vendor — swap models with a flag."
       },
       {
         "title": "Open & inspectable",
-        "body": "MIT-licensed free software, shipped as a single static Rust binary. Read the specs, audit the design, send a patch — built in the open from day one."
+        "body": "MIT-licensed free software, shipped as a single static Rust binary. Read the source, audit the design, send a patch — built in the open from day one."
       }
     ]
   },
@@ -90,6 +69,6 @@
     "releases": "Releases",
     "changelog": "Changelog",
     "contributing": "Contributing",
-    "specs": "Specs"
+    "specs": "Decisions"
   }
 }

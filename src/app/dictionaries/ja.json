@@ -1,15 +1,15 @@
 {
   "meta": {
-    "title": "aish — AI ネイティブなシェル",
-    "description": "aish は開発者向けのオープンソースかつプロバイダー非依存の AI シェル。v0.6 でツール群が拡大 — aish pr、review、changelog、ask が commit に加わり、PR 説明文・差分レビュー・変更履歴・単発質問をターミナルから。MIT ライセンスの自由ソフトウェア。"
+    "title": "aish — コマンドラインの AI コパイロット",
+    "description": "aish は開発者向けのオープンソースかつプロバイダー非依存の、コマンドラインの AI コパイロット。開発者が毎日使うコマンド — commit、pr、review、changelog、ask — を組み込みサブコマンドとしてラップし、きれいなサマリーの生成と出力のトラブルシュートを担います。MIT ライセンスの自由ソフトウェア。"
   },
   "nav": {
     "license": "MIT"
   },
   "hero": {
-    "badge": "v0.6 リリース — pr・review・changelog・ask がツール群に追加",
-    "titlePre": "AI ネイティブな",
-    "titleAccent": "シェル",
+    "badge": "v0.7 リリース — 対話式の設定ウィザード aish setup を追加",
+    "titlePre": "コマンドラインの",
+    "titleAccent": "AI コパイロット",
     "titleSuffix": "。",
     "subhead": [
       {
@@ -17,7 +17,7 @@
         "code": true
       },
       {
-        "text": " は開発者向けのオープンソースかつプロバイダー非依存の AI シェル。"
+        "text": " は開発者向けのオープンソースかつプロバイダー非依存の、コマンドラインの AI コパイロット。"
       },
       {
         "text": "aish commit",
@@ -27,40 +27,19 @@
         "text": " は本体に内蔵 — ステージ済みの差分からコミットメッセージを生成し、承認・編集・破棄をその場で選べます。バイナリ以外の導入手順はありません。"
       },
       {
-        "text": " v0.6 の新機能: "
+        "text": " v0.7 の新機能: "
       },
       {
-        "text": "aish pr",
+        "text": "aish setup",
         "code": true
       },
       {
-        "text": "、"
-      },
-      {
-        "text": "aish review",
-        "code": true
-      },
-      {
-        "text": "、"
-      },
-      {
-        "text": "aish changelog",
-        "code": true
-      },
-      {
-        "text": "、"
-      },
-      {
-        "text": "aish ask",
-        "code": true
-      },
-      {
-        "text": " — PR 説明文の生成、重大度別の差分レビュー、リリースノート作成、パイプで渡す単発質問までターミナルで完結。"
+        "text": " — プロバイダーのキー（平文または環境変数参照）とデフォルトモデルを対話形式で設定するウィザード。設定ファイルは初回起動時に自動生成されます。"
       }
     ],
     "installCaption": "Linux & macOS · x86_64 / arm64 · または cargo でソースからビルド。",
     "starButton": "GitHub でスター",
-    "specsButton": "設計仕様を読む"
+    "specsButton": "設計判断を読む"
   },
   "install": {
     "copy": "コピー",
@@ -76,11 +55,11 @@
       },
       {
         "title": "プロバイダー非依存",
-        "body": "Anthropic、OpenAI、Google Gemini、Ollama、Kilo を一つの設定とモデルエイリアスの背後に。特定ベンダーに縛られず、フラグ一つでモデルを切り替え。"
+        "body": "Anthropic、OpenAI、Google Gemini、OpenRouter、DeepSeek、Groq、Ollama、Kilo を一つの設定とモデルエイリアスの背後に。特定ベンダーに縛られず、フラグ一つでモデルを切り替え。"
       },
       {
         "title": "オープンで検証可能",
-        "body": "MIT ライセンスの自由ソフトウェア、単一の静的 Rust バイナリとして配布。仕様を読み、設計を監査し、パッチを送る — 初日からオープンに開発。"
+        "body": "MIT ライセンスの自由ソフトウェア、単一の静的 Rust バイナリとして配布。ソースを読み、設計を監査し、パッチを送る — 初日からオープンに開発。"
       }
     ]
   },
@@ -90,6 +69,6 @@
     "releases": "リリース",
     "changelog": "変更履歴",
     "contributing": "コントリビュート",
-    "specs": "仕様"
+    "specs": "設計判断"
   }
 }

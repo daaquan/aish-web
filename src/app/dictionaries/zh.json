@@ -1,15 +1,15 @@
 {
   "meta": {
-    "title": "aish — AI 原生的 shell",
-    "description": "aish 是面向开发者的开源、provider 无关的 AI shell。v0.6 扩充工具集——aish pr、review、changelog、ask 加入 commit：PR 描述、diff 审查、更新日志、终端单次提问。MIT 许可的自由软件。"
+    "title": "aish — 你命令行的 AI 副驾驶",
+    "description": "aish 是面向开发者的开源、provider 无关的命令行 AI 副驾驶。它把开发者每天都在用的命令——commit、pr、review、changelog、ask——封装为内置子命令，生成干净的摘要并排查输出。MIT 许可的自由软件。"
   },
   "nav": {
     "license": "MIT"
   },
   "hero": {
-    "badge": "v0.6 已发布 — pr、review、changelog、ask 加入工具集",
-    "titlePre": "AI 原生的",
-    "titleAccent": "shell",
+    "badge": "v0.7 已发布 — 新增交互式配置向导 aish setup",
+    "titlePre": "你命令行的",
+    "titleAccent": "AI 副驾驶",
     "titleSuffix": "。",
     "subhead": [
       {
@@ -17,7 +17,7 @@
         "code": true
       },
       {
-        "text": " 是面向开发者的开源、provider 无关的 AI shell。"
+        "text": " 是面向开发者的开源、provider 无关的命令行 AI 副驾驶。"
       },
       {
         "text": "aish commit",
@@ -27,40 +27,19 @@
         "text": " 内置于本体——把已暂存的 diff 变成提交信息，当场选择接受、编辑或放弃。除二进制本身外无需任何安装步骤。"
       },
       {
-        "text": " v0.6 新增："
+        "text": " v0.7 新增："
       },
       {
-        "text": "aish pr",
+        "text": "aish setup",
         "code": true
       },
       {
-        "text": "、"
-      },
-      {
-        "text": "aish review",
-        "code": true
-      },
-      {
-        "text": "、"
-      },
-      {
-        "text": "aish changelog",
-        "code": true
-      },
-      {
-        "text": "、"
-      },
-      {
-        "text": "aish ask",
-        "code": true
-      },
-      {
-        "text": " ——生成 PR 描述、按严重度审查 diff、撰写发布说明、用管道把输出直接变成提问，全部在终端完成。"
+        "text": " ——交互式向导，配置各 provider 的密钥（明文或环境变量引用）与默认模型；配置文件在首次运行时自动生成。"
       }
     ],
     "installCaption": "Linux & macOS · x86_64 / arm64 · 或用 cargo 从源码构建。",
     "starButton": "在 GitHub 点亮 Star",
-    "specsButton": "阅读设计规范"
+    "specsButton": "阅读架构决策"
   },
   "install": {
     "copy": "复制",
@@ -76,11 +55,11 @@
       },
       {
         "title": "Provider 无关",
-        "body": "Anthropic、OpenAI、Google Gemini、Ollama 和 Kilo 统一在一份配置和模型别名之后。绝不锁定单一厂商——用一个 flag 切换模型。"
+        "body": "Anthropic、OpenAI、Google Gemini、OpenRouter、DeepSeek、Groq、Ollama 和 Kilo 统一在一份配置和模型别名之后。绝不锁定单一厂商——用一个 flag 切换模型。"
       },
       {
         "title": "开放且可审查",
-        "body": "MIT 许可的自由软件，以单个静态 Rust 二进制分发。阅读规范、审查设计、提交补丁——从第一天起就公开开发。"
+        "body": "MIT 许可的自由软件，以单个静态 Rust 二进制分发。阅读源码、审查设计、提交补丁——从第一天起就公开开发。"
       }
     ]
   },
@@ -90,6 +69,6 @@
     "releases": "发布",
     "changelog": "更新日志",
     "contributing": "参与贡献",
-    "specs": "规范"
+    "specs": "决策"
   }
 }
