@@ -1,14 +1,14 @@
 {
   "meta": {
-    "title": "aish — AI copilot for your command line",
-    "description": "aish is an open-source, provider-agnostic AI copilot for your command line. It wraps the commands developers run every day — commit, pr, review, changelog, and ask — as built-in subcommands that draft clean summaries and troubleshoot output. Free software, MIT-licensed."
+    "title": "aish — Your AI Copilot for the Command Line",
+    "description": "aish is an open-source, provider-agnostic AI copilot for your terminal. It wraps the commands developers use every day—commit, pr, review, changelog, ask, and fix—into built-in subcommands that generate clean summaries and troubleshoot output. Free, MIT-licensed software."
   },
   "nav": {
     "license": "MIT"
   },
   "hero": {
-    "badge": "v0.7 shipped — aish setup, an interactive config wizard",
-    "titlePre": "AI copilot for your",
+    "badge": "v0.8 shipped — Introducing aish fix, run a command and diagnose its failure",
+    "titlePre": "Your AI copilot for the",
     "titleAccent": "command line",
     "titleSuffix": ".",
     "subhead": [
@@ -17,24 +17,24 @@
         "code": true
       },
       {
-        "text": " is an open-source, provider-agnostic AI copilot for your command line. "
+        "text": " is an open-source, provider-agnostic AI copilot for your terminal. "
       },
       {
         "text": "aish commit",
         "code": true
       },
       {
-        "text": " is built in — it turns your staged diff into a commit message you can accept, edit, or reject, with no install step beyond the binary itself."
+        "text": " is built right in—it instantly turns your staged diff into a clean commit message you can accept, edit, or reject, with no complex setup beyond the binary itself."
       },
       {
-        "text": " New in v0.7: "
+        "text": " New in v0.8: "
       },
       {
-        "text": "aish setup",
+        "text": "aish fix",
         "code": true
       },
       {
-        "text": " — an interactive wizard that configures your provider keys (plaintext or environment-variable references) and default model, with a config created automatically on first run."
+        "text": " — run any command and, when it fails, get an instant diagnosis and a suggested fix without leaving your terminal. It always passes the command's exit code through, so it's safe in scripts."
       }
     ],
     "installCaption": "Linux & macOS · x86_64 / arm64 · or build from source with cargo.",
@@ -47,19 +47,19 @@
     "ariaCopy": "Copy install command"
   },
   "features": {
-    "heading": "What aish is designed to be",
+    "heading": "Why you'll love aish",
     "items": [
       {
-        "title": "Your git workflow, built in",
-        "body": "aish commit turns your staged diff into a Conventional Commits message; aish pr drafts the PR title and body, aish review grades your diff by severity, and aish changelog writes release notes from your commits. Identical requests hit a deterministic local cache, every generation lands in an audit log, and aish usage turns that log into token and cost reports."
+        "title": "Seamless Git workflows",
+        "body": "Let aish handle the heavy lifting. aish commit crafts Conventional Commits from your staged diff. aish pr drafts PR titles and descriptions, aish review flags issues by severity, and aish changelog generates release notes. Identical requests hit a local cache for speed, every generation is logged for transparency, and aish usage gives you clear token and cost reports. When a build or test breaks, aish fix runs the command and diagnoses the failure on the spot."
       },
       {
-        "title": "Provider-agnostic",
-        "body": "Anthropic, OpenAI, Google Gemini, OpenRouter, DeepSeek, Groq, Ollama, and Kilo behind one config and model alias. Never locked to a single vendor — swap models with a flag."
+        "title": "Truly provider-agnostic",
+        "body": "Connect Anthropic, OpenAI, Google Gemini, OpenRouter, DeepSeek, Groq, Ollama, or Kilo through a single, unified config. Never get locked into a single vendor—swap models instantly with a simple flag."
       },
       {
-        "title": "Open & inspectable",
-        "body": "MIT-licensed free software, shipped as a single static Rust binary. Read the source, audit the design, send a patch — built in the open from day one."
+        "title": "Open source & fully transparent",
+        "body": "Free and MIT-licensed, distributed as a single, static Rust binary. Read the source, audit the design, or submit a patch—it’s been built in the open from day one."
       }
     ]
   },

@@ -1,15 +1,15 @@
 {
   "meta": {
-    "title": "aish — 你命令行的 AI 副驾驶",
-    "description": "aish 是面向开发者的开源、provider 无关的命令行 AI 副驾驶。它把开发者每天都在用的命令——commit、pr、review、changelog、ask——封装为内置子命令，生成干净的摘要并排查输出。MIT 许可的自由软件。"
+    "title": "aish — 你的终端 AI 助手",
+    "description": "aish 是一款专为开发者打造的开源、模型无关（provider-agnostic）的终端 AI 助手。它将开发者每天必用的命令（如 commit、pr、review、changelog、ask、fix）封装为内置子命令，帮你一键生成清晰的摘要并排查问题。这是一款采用 MIT 许可的自由软件。"
   },
   "nav": {
     "license": "MIT"
   },
   "hero": {
-    "badge": "v0.7 已发布 — 新增交互式配置向导 aish setup",
-    "titlePre": "你命令行的",
-    "titleAccent": "AI 副驾驶",
+    "badge": "v0.8 已发布 — 新增 aish fix，运行命令并诊断失败原因",
+    "titlePre": "你的终端",
+    "titleAccent": "AI 助手",
     "titleSuffix": "。",
     "subhead": [
       {
@@ -17,24 +17,24 @@
         "code": true
       },
       {
-        "text": " 是面向开发者的开源、provider 无关的命令行 AI 副驾驶。"
+        "text": " 是一款专为开发者打造的开源、模型无关的终端 AI 助手。"
       },
       {
         "text": "aish commit",
         "code": true
       },
       {
-        "text": " 内置于本体——把已暂存的 diff 变成提交信息，当场选择接受、编辑或放弃。除二进制本身外无需任何安装步骤。"
+        "text": " 等内置命令，能瞬间将已暂存的 diff 转化为干净的提交信息，供你当场接受、编辑或放弃。无需复杂的安装步骤，只需一个二进制文件即可运行。"
       },
       {
-        "text": " v0.7 新增："
+        "text": " v0.8 全新功能："
       },
       {
-        "text": "aish setup",
+        "text": "aish fix",
         "code": true
       },
       {
-        "text": " ——交互式向导，配置各 provider 的密钥（明文或环境变量引用）与默认模型；配置文件在首次运行时自动生成。"
+        "text": " ——运行任意命令，一旦失败便当场给出原因诊断和修复建议。它始终透传命令的退出码，因此在脚本中使用也很安全。"
       }
     ],
     "installCaption": "Linux & macOS · x86_64 / arm64 · 或用 cargo 从源码构建。",
@@ -47,19 +47,19 @@
     "ariaCopy": "复制安装命令"
   },
   "features": {
-    "heading": "aish 的设计理念",
+    "heading": "为什么选择 aish",
     "items": [
       {
-        "title": "内置 git 工作流",
-        "body": "aish commit 把已暂存的 diff 变成 Conventional Commits 信息；aish pr 起草 PR 标题与正文，aish review 按严重度审查 diff，aish changelog 从提交生成发布说明。相同请求命中确定性的本地缓存，每次生成都写入审计日志，aish usage 据此汇总 token 用量与成本。"
+        "title": "无缝衔接的 Git 工作流",
+        "body": "让 aish 替你处理繁琐的工作。aish commit 会将已暂存的 diff 转化为符合 Conventional Commits 规范的提交信息；aish pr 负责起草 PR 标题与正文；aish review 按严重程度审查代码差异；aish changelog 则能从提交记录中自动生成发布说明。相同的请求会命中本地缓存以提升速度，每次生成都会记录在审计日志中，你还可以通过 aish usage 清晰地查看 token 用量与成本统计。当构建或测试出错时，aish fix 会运行该命令并当场诊断失败原因。"
       },
       {
-        "title": "Provider 无关",
-        "body": "Anthropic、OpenAI、Google Gemini、OpenRouter、DeepSeek、Groq、Ollama 和 Kilo 统一在一份配置和模型别名之后。绝不锁定单一厂商——用一个 flag 切换模型。"
+        "title": "真正的模型无关（Provider-agnostic）",
+        "body": "通过一份统一的配置文件和模型别名，即可轻松接入 Anthropic、OpenAI、Google Gemini、OpenRouter、DeepSeek、Groq、Ollama 或 Kilo。拒绝被单一厂商绑定，只需一个简单的 flag 即可瞬间切换模型。"
       },
       {
-        "title": "开放且可审查",
-        "body": "MIT 许可的自由软件，以单个静态 Rust 二进制分发。阅读源码、审查设计、提交补丁——从第一天起就公开开发。"
+        "title": "开源且完全透明",
+        "body": "作为一款采用 MIT 许可的自由软件，它被打包为单个静态 Rust 二进制文件分发。你可以随时阅读源码、审查设计或提交补丁——我们从第一天起就坚持完全开源开发。"
       }
     ]
   },
