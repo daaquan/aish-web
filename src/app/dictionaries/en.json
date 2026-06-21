@@ -7,7 +7,7 @@
     "license": "MIT"
   },
   "hero": {
-    "badge": "v0.8 shipped — Introducing aish fix, run a command and diagnose its failure",
+    "badge": "v0.10 shipped — install from GitLab releases, with full GitLab CI support",
     "titlePre": "Your AI copilot for the",
     "titleAccent": "command line",
     "titleSuffix": ".",
@@ -27,14 +27,21 @@
         "text": " is built right in—it instantly turns your staged diff into a clean commit message you can accept, edit, or reject, with no complex setup beyond the binary itself."
       },
       {
-        "text": " New in v0.8: "
+        "text": " New in v0.9: "
+      },
+      {
+        "text": "aish run",
+        "code": true
+      },
+      {
+        "text": " — describe a task in plain language and aish writes the shell command, shown behind a confirm/edit gate before it runs. The inverse of "
       },
       {
         "text": "aish fix",
         "code": true
       },
       {
-        "text": " — run any command and, when it fails, get an instant diagnosis and a suggested fix without leaving your terminal. It always passes the command's exit code through, so it's safe in scripts."
+        "text": "."
       }
     ],
     "installCaption": "Linux & macOS · x86_64 / arm64 · or build from source with cargo.",

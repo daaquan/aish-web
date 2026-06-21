@@ -7,7 +7,7 @@
     "license": "MIT"
   },
   "hero": {
-    "badge": "v0.8 已发布 — 新增 aish fix，运行命令并诊断失败原因",
+    "badge": "v0.10 已发布 — 支持从 GitLab releases 安装，并完整支持 GitLab CI",
     "titlePre": "你的终端",
     "titleAccent": "AI 助手",
     "titleSuffix": "。",
@@ -27,14 +27,21 @@
         "text": " 等内置命令，能瞬间将已暂存的 diff 转化为干净的提交信息，供你当场接受、编辑或放弃。无需复杂的安装步骤，只需一个二进制文件即可运行。"
       },
       {
-        "text": " v0.8 全新功能："
+        "text": " v0.9 全新功能："
+      },
+      {
+        "text": "aish run",
+        "code": true
+      },
+      {
+        "text": " — 用自然语言描述需求，aish 即可生成 shell 命令，并在运行前通过确认/编辑关卡显示。它是 "
       },
       {
         "text": "aish fix",
         "code": true
       },
       {
-        "text": " ——运行任意命令，一旦失败便当场给出原因诊断和修复建议。它始终透传命令的退出码，因此在脚本中使用也很安全。"
+        "text": " 的逆操作。"
       }
     ],
     "installCaption": "Linux & macOS · x86_64 / arm64 · 或用 cargo 从源码构建。",
