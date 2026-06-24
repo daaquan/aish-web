@@ -7,7 +7,7 @@
     "license": "MIT"
   },
   "hero": {
-    "badge": "v0.10 shipped — install from GitLab releases, with full GitLab CI support",
+    "badge": "v0.11 shipped — `aish commit --edit` opens your editor pre-filled with the generated message",
     "titlePre": "Your AI copilot for the",
     "titleAccent": "command line",
     "titleSuffix": ".",

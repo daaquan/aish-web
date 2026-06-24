@@ -7,7 +7,7 @@
     "license": "MIT"
   },
   "hero": {
-    "badge": "v0.10 リリース — GitLab リリースからのインストールと GitLab CI に対応",
+    "badge": "v0.11 リリース — `aish commit --edit` で生成メッセージを事前入力したエディタを起動",
     "titlePre": "あなたのターミナルに、",
     "titleAccent": "AI コパイロット",
     "titleSuffix": "を。",
