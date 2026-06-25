@@ -7,7 +7,7 @@
     "license": "MIT"
   },
   "hero": {
-    "badge": "v0.11 shipped — `aish commit --edit` opens your editor pre-filled with the generated message",
+    "badge": "v0.12 shipped — set `commit.instructions` in your config to shape commit-message style (gitmoji, longer subjects, a mandatory body)",
     "titlePre": "Your AI copilot for the",
     "titleAccent": "command line",
     "titleSuffix": ".",

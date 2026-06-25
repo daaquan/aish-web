@@ -7,7 +7,7 @@
     "license": "MIT"
   },
   "hero": {
-    "badge": "v0.11 已发布 — `aish commit --edit` 打开编辑器并预填生成的提交信息",
+    "badge": "v0.12 已发布 — 在配置中设置 `commit.instructions` 即可定制提交信息风格（gitmoji、更长的标题、必须的正文等）",
     "titlePre": "你的终端",
     "titleAccent": "AI 助手",
     "titleSuffix": "。",

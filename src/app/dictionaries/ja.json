@@ -7,7 +7,7 @@
     "license": "MIT"
   },
   "hero": {
-    "badge": "v0.11 リリース — `aish commit --edit` で生成メッセージを事前入力したエディタを起動",
+    "badge": "v0.12 リリース — 設定の `commit.instructions` でコミットメッセージのスタイルを調整（gitmoji・長めの件名・本文必須など）",
     "titlePre": "あなたのターミナルに、",
     "titleAccent": "AI コパイロット",
     "titleSuffix": "を。",
