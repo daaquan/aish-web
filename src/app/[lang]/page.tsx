@@ -7,7 +7,6 @@ import { LangSwitcher } from "../../components/LangSwitcher";
 
 const REPO = "https://github.com/daaquan/aish";
 const RELEASES = "https://github.com/daaquan/aish/releases";
-const SPECS = "https://github.com/daaquan/aish/tree/main/docs/adr";
 const CONTRIBUTING = "https://github.com/daaquan/aish/blob/main/CONTRIBUTING.md";
 const CHANGELOG = "https://github.com/daaquan/aish/blob/main/CHANGELOG.md";
 
@@ -122,12 +121,12 @@ export default async function Home({
               {hero.starButton}
             </a>
             <a
-              href={SPECS}
+              href={CHANGELOG}
               target="_blank"
               rel="noopener noreferrer"
               className="flex h-11 items-center justify-center rounded-md border border-[var(--border-strong)] px-5 text-sm font-medium text-text transition-colors hover:bg-[var(--panel-2)]"
             >
-              {hero.specsButton}
+              {hero.changelogButton}
             </a>
           </div>
 
@@ -148,7 +147,7 @@ export default async function Home({
             <div className="space-y-2.5 p-5 font-mono text-[13px] leading-relaxed sm:text-sm">
               <p>
                 <span className="text-faint">$ </span>
-                <span className="text-text">git add -A &amp;&amp; aish commit --signoff</span>
+                <span className="text-text">git add -A &amp;&amp; aish commit --edit</span>
               </p>
               <p className="text-muted">
                 <span className="text-faint">→</span> reading staged diff · model:
@@ -159,10 +158,10 @@ export default async function Home({
                 Implements the third API shape behind the Provider trait, with
                 401/429 error mapping and a wiremock test.
               </p>
-              <p className="text-faint">Signed-off-by: daaquan &lt;…&gt;</p>
               <p className="pt-1 text-muted">
-                Accept? <span className="text-text">[Y/n/e(dit)]</span>{" "}
-                <span className="cursor align-middle" />
+                <span className="text-faint">→</span> opening{" "}
+                <span className="text-text">$EDITOR</span> · save to commit, empty
+                to abort <span className="cursor align-middle" />
               </p>
             </div>
           </div>
@@ -211,9 +210,6 @@ export default async function Home({
             </a>
             <a href={CONTRIBUTING} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-text">
               {footer.contributing}
-            </a>
-            <a href={SPECS} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-text">
-              {footer.specs}
             </a>
           </div>
         </footer>

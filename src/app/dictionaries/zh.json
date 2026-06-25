@@ -24,29 +24,26 @@
         "code": true
       },
       {
-        "text": " 等内置命令，能瞬间将已暂存的 diff 转化为干净的提交信息，供你当场接受、编辑或放弃。无需复杂的安装步骤，只需一个二进制文件即可运行。"
+        "text": " 能将已暂存的 diff 转化为干净的提交信息，供你当场接受、编辑或放弃。想在提交前再改改？用 "
       },
       {
-        "text": " v0.9 全新功能："
+        "text": "aish commit --edit",
+        "code": true
+      },
+      {
+        "text": " 把生成的信息放进 $EDITOR，确认后再落盘——无需复杂安装，只要一个二进制文件。此外还有 "
       },
       {
         "text": "aish run",
         "code": true
       },
       {
-        "text": " — 用自然语言描述需求，aish 即可生成 shell 命令，并在运行前通过确认/编辑关卡显示。它是 "
-      },
-      {
-        "text": "aish fix",
-        "code": true
-      },
-      {
-        "text": " 的逆操作。"
+        "text": " — 把自然语言变成 shell 命令，并在运行前通过确认/编辑关卡显示。"
       }
     ],
     "installCaption": "Linux & macOS · x86_64 / arm64 · 或用 cargo 从源码构建。",
     "starButton": "在 GitHub 点亮 Star",
-    "specsButton": "阅读架构决策"
+    "changelogButton": "阅读更新日志"
   },
   "install": {
     "copy": "复制",
@@ -75,7 +72,6 @@
     "github": "GitHub",
     "releases": "发布",
     "changelog": "更新日志",
-    "contributing": "参与贡献",
-    "specs": "决策"
+    "contributing": "参与贡献"
   }
 }

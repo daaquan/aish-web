@@ -17,7 +17,7 @@ export type Dictionary = {
     subhead: Run[];
     installCaption: string;
     starButton: string;
-    specsButton: string;
+    changelogButton: string;
   };
   install: { copy: string; copied: string; ariaCopy: string };
   features: { heading: string; items: { title: string; body: string }[] };
@@ -27,7 +27,6 @@ export type Dictionary = {
     releases: string;
     changelog: string;
     contributing: string;
-    specs: string;
   };
 };
 

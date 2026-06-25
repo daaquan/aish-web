@@ -24,29 +24,26 @@
         "code": true
       },
       {
-        "text": " is built right in—it instantly turns your staged diff into a clean commit message you can accept, edit, or reject, with no complex setup beyond the binary itself."
+        "text": " turns your staged diff into a clean commit message you can accept, edit, or reject. Reach for "
       },
       {
-        "text": " New in v0.9: "
+        "text": "aish commit --edit",
+        "code": true
+      },
+      {
+        "text": " to open the generated message in your $EDITOR before it lands—no setup beyond the binary itself. There's also "
       },
       {
         "text": "aish run",
         "code": true
       },
       {
-        "text": " — describe a task in plain language and aish writes the shell command, shown behind a confirm/edit gate before it runs. The inverse of "
-      },
-      {
-        "text": "aish fix",
-        "code": true
-      },
-      {
-        "text": "."
+        "text": " to turn plain language into a shell command, behind a confirm/edit gate."
       }
     ],
     "installCaption": "Linux & macOS · x86_64 / arm64 · or build from source with cargo.",
     "starButton": "Star on GitHub",
-    "specsButton": "Read the architecture decisions"
+    "changelogButton": "Read the changelog"
   },
   "install": {
     "copy": "Copy",
@@ -75,7 +72,6 @@
     "github": "GitHub",
     "releases": "Releases",
     "changelog": "Changelog",
-    "contributing": "Contributing",
-    "specs": "Decisions"
+    "contributing": "Contributing"
   }
 }
