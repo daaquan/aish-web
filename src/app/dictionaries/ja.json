@@ -7,7 +7,7 @@
     "license": "MIT"
   },
   "hero": {
-    "badge": "v0.12 リリース — 設定の `commit.instructions` でコミットメッセージのスタイルを調整（gitmoji・長めの件名・本文必須など）",
+    "badge": "v0.13 リリース — `aish commit -a` で追跡済みの変更を自動ステージ、`aish pr --draft` でドラフト PR を作成",
     "titlePre": "あなたのターミナルに、",
     "titleAccent": "AI コパイロット",
     "titleSuffix": "を。",

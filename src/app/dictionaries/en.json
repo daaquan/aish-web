@@ -7,7 +7,7 @@
     "license": "MIT"
   },
   "hero": {
-    "badge": "v0.12 shipped — set `commit.instructions` in your config to shape commit-message style (gitmoji, longer subjects, a mandatory body)",
+    "badge": "v0.13 shipped — `aish commit -a` stages tracked changes first, `aish pr --draft` opens the PR as a draft",
     "titlePre": "Your AI copilot for the",
     "titleAccent": "command line",
     "titleSuffix": ".",

@@ -7,7 +7,7 @@
     "license": "MIT"
   },
   "hero": {
-    "badge": "v0.12 已发布 — 在配置中设置 `commit.instructions` 即可定制提交信息风格（gitmoji、更长的标题、必须的正文等）",
+    "badge": "v0.13 已发布 — `aish commit -a` 自动暂存已跟踪的改动，`aish pr --draft` 直接创建草稿 PR",
     "titlePre": "你的终端",
     "titleAccent": "AI 助手",
     "titleSuffix": "。",
